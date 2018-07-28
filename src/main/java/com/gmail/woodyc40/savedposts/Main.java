@@ -5,7 +5,6 @@ import com.gmail.woodyc40.savedposts.client.TokenClient;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import okhttp3.OkHttpClient;
 
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
@@ -20,13 +19,9 @@ import java.nio.file.StandardOpenOption;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
-        Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
-
         Path folder = Paths.get(System.getProperty("user.dir"));
         p("Using " + folder.toAbsolutePath() + " as the working dir");
 
